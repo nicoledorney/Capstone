@@ -1,0 +1,26 @@
+
+<h3>CURRENTLY AVAILABLE PRODUCTS</h3>
+<table border="5">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Photo</th>
+        <th>Company</th>
+        <th>Buy</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product._id}}</td>
+        <td>{{product.pname}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <img src="assets/images/{{product.image}}" width="150" height="120">
+        </td>
+        <td>{{product.company}}</td>
+        <td>
+            <a [routerLink]="['/cart', { _id:product._id }]">Buy Now</a>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,17 @@
+.marge {
+  margin-top: 1%
+}
+.cont{
+  width: 95%;
+  border: 15px solid lightslategray;
+  padding: 50px;
+  margin: 20px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+h1{
+  text-align: center;
+  color: lightcoral;
+}

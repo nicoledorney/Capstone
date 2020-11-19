@@ -1,0 +1,15 @@
+<p>manage-users works!</p>
+<div class="table"> 
+    <input type="button" value="View Products" (click)="loadProductInfo()">
+    <div *ngIf="flag">
+            <table border="1">
+                    <tr>
+                        <th>Username</th>
+                        
+                    </tr>
+                    <tr *ngFor="let pp of users">
+                        <td>{{pp.username}}</td>
+                    </tr>
+            </table>
+    </div>
+</div>

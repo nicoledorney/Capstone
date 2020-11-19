@@ -1,0 +1,27 @@
+<div>
+    <div class="buttons">
+        <button class="manageButton" id="viewButton" (click)="goToView()">View Products</button><br>
+        <button class="manageButton" id="updateButton" (click)="goToUpdate()">Update Product</button><br>
+        <button class="manageButton" id="addButton" (click)="goToAdd()">Add New Product</button><br>
+        <button class="manageButton" id="deleteButton" (click)="goToDelete()">Delete Product</button><br>
+    </div>
+    </div>
+<div class="form">
+    <h1>Update an Existing Product</h1>
+    <form [formGroup]="productRef" (ngSubmit)="updateProductDetails()">
+        <label>Product Id</label>
+        <input type="text" formControlName="_id"/><br/>
+        <label>Product Name</label>
+        <input type="text" formControlName="pname"/><br/>
+        <label>Product Description</label>
+        <input type="text" formControlName="description"/><br>
+        <label>Product Image</label>
+        <input type="text" formControlName="image"/><br/>
+        <label>Product Price</label>
+        <input type="text" formControlName="price"/><br/>
+        <label>Company</label>
+        <input type="text" formControlName="company"/><br/>
+        <input type="submit" value="Update Product"/>
+    </form>
+    {{result}}
+</div>

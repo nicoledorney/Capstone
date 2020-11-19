@@ -1,0 +1,51 @@
+<div>
+    <div class="buttons">
+        <button class="manageButton" id="viewButton" (click)="goToView()">View Products</button><br>
+        <button class="manageButton" id="updateButton" (click)="goToUpdate()">Update Product</button><br>
+        <button class="manageButton" id="addButton" (click)="goToAdd()">Add New Product</button><br>
+        <button class="manageButton" id="deleteButton" (click)="goToDelete()">Delete Product</button><br>
+    </div>
+    </div>
+<div class="form">
+    <h1>Add a New Product</h1>
+    <form [formGroup]="productRef" (ngSubmit)="storeProductDetails()">
+        <label>Product Id</label>
+        <input type="text" formControlName="_id"/><br/>
+        <label>Product Name</label>
+        <input type="text" formControlName="pname"/><br/>
+        <label>Product Description</label>
+        <input type="text" formControlName="description"/><br/>
+        <label>Product Image</label>
+        <input type="text" formControlName="image"/><br/>
+        <label>Product Price</label>
+        <input type="text" formControlName="price"/><br/>
+        <label>Product Company</label>
+        <input type="text" formControlName="company"/><br/>
+        <input type="submit" value="Store Product"/>
+
+        
+    </form>
+    {{result}}
+</div>
+
+<div>
+    <!--input type="button" value="View Products" (click)="loadProductInfo()"/-->
+    <div *ngIf="flag">
+            <table border="1">
+                    <tr>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Product Description</th>
+                        <th>Product Price</th>
+                        <th>Company</th>
+                    </tr>
+                    <tr *ngFor="let pp of products">
+                        <td>{{pp._id}}</td>
+                        <td>{{pp.pname}}</td>
+                        <td>{{pp.description}}</td>
+                        <td>{{pp.price}}</td>
+                        <td>{{pp.company}}</td>
+                    </tr>
+            </table>
+    </div>
+</div>

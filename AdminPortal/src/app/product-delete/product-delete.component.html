@@ -1,0 +1,17 @@
+<div>
+    <div class="buttons">
+        <button class="manageButton" id="viewButton" (click)="goToView()">View Products</button><br>
+        <button class="manageButton" id="updateButton" (click)="goToUpdate()">Update Product</button><br>
+        <button class="manageButton" id="addButton" (click)="goToAdd()">Add New Product</button><br>
+        <button class="manageButton" id="deleteButton" (click)="goToDelete()">Delete Product</button><br>
+    </div>
+    </div>
+<div class="form">
+    <h1>Delete an Exitsting Product</h1>
+    <label>Product Id</label>
+    <input type="text" #_id/>
+    <input type="button" value="Delete Product" 
+    (click)="deleteProduct(_id.value)"/>
+    <br/>
+    {{result}}
+</div>

@@ -1,0 +1,51 @@
+.cart{
+    width: 95%;
+    padding: 50px;
+    margin: 20px;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    height: 100%;
+  }
+  h1{
+    text-align: center;
+    color: lightcoral;
+  }
+
+  table{
+    width: 100%;
+    align-self: center;
+    vertical-align: middle;
+    padding: 50px;
+    border-top: 10px;
+   
+}
+.table{
+    justify-content: center;
+    align-items: center;
+    border: 5px solid lightcoral;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th{
+    text-align: center;
+}
+.manageButton{
+    color: white;
+    background-color: lightcoral;
+    text-align: center;
+    padding: 8px;
+    margin: auto;
+    border-radius: 5%;
+    width: 250px;
+}
+.buttons{
+    padding: 50px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 0%;
+    size: 20%;
+}
